@@ -161,6 +161,11 @@ module ApplicationHelper
         ]
       },
       {
+        href: miscellaneous_invoice_path,
+        title: _('Faturalar'),
+        content: "<i class='fa fa-lg fa-fw fa-table'></i> <span class='menu-item-parent'>" + _('Faturalar') + "</span>",
+      },
+      {
         href: '#',
         content: "<i class='fa fa-lg fa-fw fa-cube txt-color-blue'></i> <span class='menu-item-parent'>" + _('SmartAdmin Intel') + "</span>",
         children: [

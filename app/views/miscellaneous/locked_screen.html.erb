@@ -3,18 +3,15 @@
 
 <form class="lockscreen animated flipInY" action="index.html">
   <div class="logo">
-    <h1 class="semi-bold"><%= image_tag 'logo-o.png', alt: '' %> SmartAdmin</h1>
+    <h1 class="semi-bold"><%= image_tag 'logo-o.png', alt: '' %> OtoData</h1>
   </div>
   <div>
     <%= image_tag 'avatars/sunny-big.png', alt: '', width: '120', height: '120' %>
     <div>
-      <h1><i class="fa fa-user fa-3x text-muted air air-top-right hidden-mobile"></i>John Doe <small><i class="fa fa-lock text-muted"></i> &nbsp;Locked</small></h1>
-      <p class="text-muted">
-        <a href="mailto:simmons@smartadmin">john.doe@smartadmin.com</a>
-      </p>
+      <h1><i class="fa fa-user fa-3x text-muted air air-top-right hidden-mobile"></i> <%= current_user.email%> <small><i class="fa fa-lock text-muted"></i> &nbsp;Kilitli</small></h1>
 
       <div class="input-group">
-        <input class="form-control" type="password" placeholder="Password">
+        <input class="form-control" type="password" placeholder="Parola">
         <div class="input-group-btn">
           <button class="btn btn-primary" type="submit">
             <i class="fa fa-key"></i>
@@ -22,13 +19,13 @@
         </div>
       </div>
       <p class="no-margin margin-top-5">
-        Logged as someone else? <a href="login.html"> Click here</a>
+        Başka biri olarak giriş yapmak için <a href="login.html"> buraya tıklayın!</a>
       </p>
     </div>
 
   </div>
   <p class="font-xs margin-top-5">
-    Copyright SmartAdmin 2014-2020.
+    Copyright OtoData 2018.
 
   </p>
 </form>
