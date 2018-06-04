@@ -145,6 +145,23 @@ module ApplicationHelper
       },
       {
         href: '#',
+        title: _('Ürünler'),
+        content: "<i class='fa fa-lg fa-fw fa-cube'></i> <span class='menu-item-parent'>" + _('Ürünler') + "</span>",
+        children: [
+          {
+            href: parts_path,
+            title: _('Ürünler'),
+            content: "<span class='menu-item-parent'>" + _('Parçalar') + "</span>"
+          },
+          {
+            href: cars_path,
+            title: _('Ürünler'),
+            content: "<span class='menu-item-parent'>" + _('Otomobiller') + "</span>"
+          },
+        ]
+      },
+      {
+        href: '#',
         title: _('Siparişler'),
         content: "<i class='fa fa-shopping-cart'></i> <span class='menu-item-parent'>" + _('Siparişler') + "</span>",
         children: [

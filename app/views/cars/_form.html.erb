@@ -1,0 +1,65 @@
+<%= form_for @car, html: { class: "smart-form", id: "checkout-form" } do |f| %>
+
+
+
+
+
+  <fieldset>
+    <div class="row">
+      <section class="col col-6">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :name, placeholder: 'Araç Adı'%>
+        </label>
+      </section>
+      <section class="col col-6">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :year, placeholder: 'Yıl Bilgisi'%>
+        </label>
+      </section>
+    </div>
+
+    <div class="row">
+      <section class="col col-6">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :fuel, placeholder: 'Yakıt Tipi'%>
+        </label>
+      </section>
+      <section class="col col-6">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :series, placeholder: 'Serisi'%>
+        </label>
+      </section>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div class="row">
+      <section class="col col-6">
+        <label class="check_box">
+
+          <%= f.check_box :state %>Araç Üretimde
+         </label>
+      </section>
+      <section class="col col-6">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :price, placeholder: 'Fiyat'%>
+        </label>
+      </section>
+    </div>
+
+    <section>
+      <label class="textarea">
+        <%= f.text_area :desc, placeholder: 'Açıklama' , rows: 3%>
+      </label>
+    </section>
+  </fieldset>
+
+  <footer>
+    <div class="actions">
+      <%= f.submit 'Kaydet', class:'btn btn-primary'%>
+    </div>
+    <%= link_to 'Geri', cars_path, class:'btn btn-primary' %>
+  </footer>
+
+
+<% end %>
