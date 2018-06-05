@@ -1,34 +1,155 @@
-<p id="notice"><%= notice %></p>
+<% content_for :ribbon do %>
+<!-- RIBBON -->
+<div id="ribbon">
 
-<p>
-  <strong>Customer:</strong>
-  <%= @car_order.customer %>
-</p>
+  <span class="ribbon-button-alignment">
+    <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+      <i class="fa fa-refresh"></i>
+    </span>
+  </span>
 
-<p>
-  <strong>Orderdate:</strong>
-  <%= @car_order.orderDate %>
-</p>
+  <!-- breadcrumb -->
+  <ol class="breadcrumb">
+    <li>Anasayfa</li><li>Siparişler</li>
+  </ol>
 
-<p>
-  <strong>Deliverydate:</strong>
-  <%= @car_order.deliveryDate %>
-</p>
+</div>
+<!-- END RIBBON -->
+<% end %>
 
-<p>
-  <strong>Adet:</strong>
-  <%= @car_order.adet %>
-</p>
 
-<p>
-  <strong>Fiyat:</strong>
-  <%= @car_order.fiyat %>
-</p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @car_order.status %>
-</p>
 
-<%= link_to 'Edit', edit_car_order_path(@car_order) %> |
-<%= link_to 'Back', car_orders_path %>
+
+  <div id="content">
+
+    <!-- row -->
+    <div class="row">
+
+      <!-- col -->
+      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+
+          <!-- PAGE HEADER -->
+          <i class="fa-fw fa fa-home"></i>
+            Siparişler
+          <span>>
+            Detay
+          </span>
+        </h1>
+      </div>
+      <!-- end col -->
+
+      <!-- right side of the page with the sparkline graphs -->
+      <!-- col -->
+      <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8 text-right">
+
+        <a href="javascript:void(0);" class="btn btn-default">
+          <i class="fa fa-3x fa-print"></i>
+        </a>
+
+      </div>
+      <!-- end col -->
+
+    </div>
+    <!-- end row -->
+
+    <!--
+      The ID "widget-grid" will start to initialize all widgets below
+      You do not need to use widgets if you dont want to. Simply remove
+      the <section></section> and you can use wells or panels instead
+      -->
+
+    <!-- widget grid -->
+    <section id="widget-grid" class="">
+
+      <!-- row -->
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <!-- product -->
+          <div class="product-content product-wrap clearfix product-deatil">
+            <div class="row">
+
+                <div class="col-md-7 col-sm-12 col-xs-12">
+
+                <h2 class="name">
+                  Sipariş Numarası : <%= @car_order.id %>
+
+                </h2>
+                <hr>
+                <h3 class="price-container">
+                  Birim Fiyatı : $<%= @car_order.fiyat %>
+                  <small>*vergi dahil</small>
+                </h3>
+
+                <div class="certified">
+                  <ul>
+                    <li>Teslim Tarihi : <span><%= @car_order.deliveryDate %></span></li>
+                    <li>Sipariş Tarihi : <span><%= @car_order.orderDate %></span></li>
+                  </ul>
+                </div>
+                <hr>
+
+                <h3 class="name">
+                  Adet : <%= @car_order.adet %>
+
+                </h3>
+
+                <hr>
+
+                <h3 class="name">
+                  Sipariş Edilen Araç veya Parça : <%= @car_order.cname %> -- <%= @car_order.pname %>
+
+                </h3>
+<hr>
+                <h3 class="name">
+                  Sipariş Durumu: <%= @car_order.status %>
+
+                </h3>
+
+
+                <div class="description description-tabs">
+
+
+                  <ul id="myTab" class="nav nav-pills">
+                    <li class="active"><a href="#more-information" data-toggle="tab" class="no-margin">Açıklama</a></li>
+                  </ul>
+                  <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="more-information">
+                      <br>
+                      <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
+                    </div>
+                    <div class="tab-pane fade" id="specifications">
+
+                    </div>
+                  </div>
+
+
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="btn-group pull-right">
+                                    <%= link_to 'Düzenle', edit_car_order_path(@car_order) , class:'btn btn-warning btn-default' %>
+                                    <%= link_to 'Geri', car_orders_path, class:'btn btn-white btn-default' %>
+
+                                </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- end product -->
+        </div>
+
+      </div>
+
+      <!-- end row -->
+
+    </section>
+    <!-- end widget grid -->
+
+  </div>
