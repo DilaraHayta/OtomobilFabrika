@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'car_orders/invoice',
+      to: 'car_orders#invoice',
+      as: :car_orders_invoice
   resources :car_orders
   resources :parts
   resources :cars
@@ -186,6 +189,8 @@ Rails.application.routes.draw do
 
   # Misc methods
   get '/home/set_locale', to: 'home#set_locale', as: :home_set_locale
+
+
 
   # CK editor
   mount Ckeditor::Engine => '/ckeditor'

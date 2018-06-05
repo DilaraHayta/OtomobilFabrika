@@ -133,7 +133,9 @@
                   <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="btn-group pull-right">
                                     <%= link_to 'Düzenle', edit_car_order_path(@car_order) , class:'btn btn-warning btn-default' %>
-                                    <%= link_to 'Geri', car_orders_path, class:'btn btn-white btn-default' %>
+
+                                    <%= link_to 'Faturalandır', car_orders_invoice_path, class:'btn btn-warning btn-danger' %>
+                                    <%= link_to 'Geri', car_orders_path, class:'btn btn-white btn-primary' %>
 
                                 </div>
                   </div>

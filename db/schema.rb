@@ -28,8 +28,6 @@ ActiveRecord::Schema.define(version: 20180605042005) do
     t.string   "cname"
     t.string   "pname"
     t.string   "status"
-    t.index ["car_id"], name: "index_car_orders_on_car_id", using: :btree
-    t.index ["part_id"], name: "index_car_orders_on_part_id", using: :btree
   end
 
   create_table "cars", force: :cascade do |t|
@@ -81,7 +79,5 @@ ActiveRecord::Schema.define(version: 20180605042005) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "car_orders", "cars"
-  add_foreign_key "car_orders", "parts"
   add_foreign_key "parts", "cars"
 end

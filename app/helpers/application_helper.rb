@@ -134,13 +134,8 @@ module ApplicationHelper
           {
             href: root_path,
             title: _('Dashboard'),
-            content: "<span class='menu-item-parent'>" + _('Analytics Dashboard') + "</span>"
-          },
-          {
-            href: dashboard_social_path,
-            title: _('Dashboard'),
-            content: "<span class='menu-item-parent'>" + _('Social Wall') + "</span>"
-          },
+            content: "<span class='menu-item-parent'>" + _('Analitik Dashboard') + "</span>"
+          }
         ]
       },
       {
@@ -166,30 +161,9 @@ module ApplicationHelper
         content: "<i class='fa fa-shopping-cart'></i> <span class='menu-item-parent'>" + _('Siparişler') + "</span>",
       },
       {
-        href: miscellaneous_invoice_path,
+        href: car_orders_invoice_path,
         title: _('Faturalar'),
         content: "<i class='fa fa-lg fa-fw fa-table'></i> <span class='menu-item-parent'>" + _('Faturalar') + "</span>",
-      },
-      {
-        href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-cube txt-color-blue'></i> <span class='menu-item-parent'>" + _('SmartAdmin Intel') + "</span>",
-        children: [
-          {
-            href: smartadmin_intel_app_layouts_path,
-            title: _('Dashboard'),
-            content: "<i class='fa fa-lg fa-fw fa-gear'></i> <span class='menu-item-parent'>" + _('App Layouts') + "</span>"
-          },
-          {
-            href: smartadmin_intel_prebuilt_skins_path,
-            title: _('Dashboard'),
-            content: "<i class='fa fa-lg fa-fw fa-picture-o'></i> <span class='menu-item-parent'>" + _('Prebuilt Skins') + "</span>"
-          },
-          {
-            href: smartadmin_intel_app_settings_path,
-            title: _('Dashboard'),
-            content: "<i class='fa fa-cube'></i> " + _('App Settings') + ""
-          },
-        ]
       },
       {
         href: outlook_inbox_path,
@@ -230,185 +204,6 @@ module ApplicationHelper
         ]
       },
       {
-        href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-table'></i> <span class='menu-item-parent'>" + _('Tables') + "</span>",
-        children: [
-          {
-            href: tables_normal_tables_path,
-            content: _('Normal Tables')
-          },
-          {
-            href: tables_data_tables_path,
-            content: "" + _('Data Tables') + " <span class='badge inbox-badge bg-color-greenLight hidden-mobile'>" + _('responsive') + "</span>"
-          },
-          {
-            href: tables_jquery_grid_path,
-            content: _('Jquery Grid')
-          },
-        ]
-      },
-      {
-        href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-pencil-square-o'></i> <span class='menu-item-parent'>" + _('Forms') + "</span>",
-        children: [
-          {
-            href: forms_smart_form_elements_path,
-            content: _('Smart Form Elements')
-          },
-          {
-            href: forms_smart_form_layouts_path,
-            content: _('Smart Form Layouts')
-          },
-          {
-            href: forms_smart_form_validations_path,
-            content: _('Smart Form Validation')
-          },
-          {
-            href: forms_bootstrap_form_elements_path,
-            content: _('Bootstrap Form Elements')
-          },
-          {
-            href: forms_bootstrap_form_validation_path,
-            content: _('Bootstrap Form Validation')
-          },
-          {
-            href: forms_form_plugins_path,
-            content: _('Form Plugins')
-          },
-          {
-            href: forms_wizards_path,
-            content: _('Wizards')
-          },
-          {
-            href: forms_bootstrap_editors_path,
-            content: _('Bootstrap Editors')
-          },
-          {
-            href: forms_dropzone_path,
-            content: _('Dropzone')
-          },
-          {
-            href: forms_image_cropping_path,
-            content: _('Image Cropping')
-          },
-          {
-            href: forms_ck_editor_path,
-            content: _('CK Editor')
-          },
-        ]
-      },
-      {
-        href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-desktop'></i> <span class='menu-item-parent'>" + _('UI Elements') + "</span>",
-        children: [
-          {
-            href: ui_elements_general_elements_path,
-            content: _('General Elements')
-          },
-          {
-            href: ui_elements_buttons_path,
-            content: _('Buttons')
-          },
-          {
-            href: '#',
-            content: _('Icons'),
-            children: [
-              {
-                href: ui_elements_icons_font_awesome_path,
-                content: "<i class='fa fa-plane'></i> " + _('Font Awesome') + ""
-              },
-              {
-                href: ui_elements_icons_glyph_icons_path,
-                content: "<i class='glyphicon glyphicon-plane'></i> " + _('Glyph Icons') + ""
-              },
-              {
-                href: ui_elements_icons_flags_path,
-                content: "<i class='fa fa-flag'></i> " + _('Flags') + ""
-              },
-            ]
-          },
-          {
-            href: ui_elements_grid_path,
-            content: _('Grid')
-          },
-          {
-            href: ui_elements_tree_view_path,
-            content: _('Tree View')
-          },
-          {
-            href: ui_elements_nestable_lists_path,
-            content: _('Nestable Lists')
-          },
-          {
-            href: ui_elements_jquery_ui_path,
-            content: _('JQuery UI')
-          },
-          {
-            href: ui_elements_typography_path,
-            content: _('Typography')
-          },
-          {
-            href: '#',
-            content: _('Six Level Menu'),
-            children: [
-              {
-                href: '#',
-                content: "<i class='fa fa-fw fa-folder-open'></i> " + _('Item #2') + "",
-                children: [
-                  {
-                    href: '#',
-                    content: "<i class='fa fa-fw fa-folder-open'></i> " + _('Sub #2.1') + " ",
-                    children: [
-                      {
-                        href: '#',
-                        content: "<i class='fa fa-fw fa-file-text'></i> " + _('Item #2.1.1') + "",
-                        children: [
-                          {
-                            href: '#',
-                            content: "<i class='fa fa-fw fa-plus'></i> " + _('Expand') + "",
-                            children: [
-                              {
-                                href: '#',
-                                content: "<i class='fa fa-fw fa-file-text'></i> " + _('File') + ""
-                              },
-                            ]
-                          },
-                        ]
-                      },
-                    ]
-                  },
-                ]
-              },
-              {
-                href: '#',
-                content: "<i class='fa fa-fw fa-folder-open'></i> " + _('Item #3') + "",
-                children: [
-                  {
-                    href: '#',
-                    content: "<i class='fa fa-fw fa-folder-open'></i> " + _('3rd Level') + "",
-                    children: [
-                      {
-                        href: '#',
-                        content: "<i class='fa fa-fw fa-file-text'></i> " + _('File') + ""
-                      },
-                      {
-                        href: '#',
-                        content: "<i class='fa fa-fw fa-file-text'></i> " + _('File') + ""
-                      },
-                    ]
-                  },
-                ]
-              },
-              {
-                href: '#',
-                class: 'inactive',
-                content: "<i class='fa fa-fw fa-folder-open'></i> " + _('Item #4 (disabled)') + ""
-              },
-            ]
-          },
-        ]
-      },
-      {
         href: widgets_path,
         content: "<i class='fa fa-lg fa-fw fa-list-alt'></i> <span class='menu-item-parent'>" + _('Widgets') + "</span>"
       },
@@ -419,92 +214,13 @@ module ApplicationHelper
           {
             href: cool_features_calendar_path,
             content: "<i class='fa fa-lg fa-fw fa-calendar'></i> <span class='menu-item-parent'>" + _('Calendar') + "</span>"
-          },
-          {
-            href: cool_features_gmap_skins_path,
-            content: "<i class='fa fa-lg fa-fw fa-map-marker'></i> <span class='menu-item-parent'>" + _('GMap Skins') + "</span><span class='badge bg-color-greenLight pull-right inbox-badge'>9</span>"
-          },
+          }
         ]
       },
       {
         href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-puzzle-piece'></i> <span class='menu-item-parent'>" + _('App Views') + "</span>",
+        content: "<i class='fa fa-lg fa-fw fa-windows'></i> <span class='menu-item-parent'>" + _('Diğer') + "</span>",
         children: [
-          {
-            href: app_views_projects_path,
-            content: "<i class='fa fa-file-text-o'></i> " + _('Projects') + ""
-          },
-          {
-            href: app_views_blog_path,
-            content: "<i class='fa fa-paragraph'></i> " + _('Blog') + ""
-          },
-          {
-            href: app_views_gallery_path,
-            content: "<i class='fa fa-picture-o'></i> " + _('Gallery') + ""
-          },
-          {
-            href: '#',
-            content: "<i class='fa fa-comments'></i> " + _('Forum Layout') + "",
-            children: [
-              {
-                href: app_views_forum_layout_general_view_path,
-                content: _('General View')
-              },
-              {
-                href: app_views_forum_layout_topic_view_path,
-                content: _('Topic View')
-              },
-              {
-                href: app_views_forum_layout_post_view_path,
-                content: _('Post View')
-              },
-
-            ]
-          },
-          {
-            href: app_views_profile_path,
-            content: "<i class='fa fa-group'></i> " + _('Profile') + ""
-          },
-          {
-            href: app_views_timeline_path,
-            content: "<i class='fa fa-clock-o'></i> " + _('Timeline') + ""
-          },
-          {
-            href: app_views_search_page_path,
-            content: "<i class='fa fa-search'></i>  " + _('Search Page') + ""
-          },
-        ]
-      },
-      {
-        href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-shopping-cart'></i> <span class='menu-item-parent'>" + _('E-Commerce') + "</span>",
-        children: [
-          {
-            href: e_commerce_orders_path,
-            content: _('Orders')
-          },
-          {
-            href: e_commerce_products_view_path,
-            content: _('Products View')
-          },
-          {
-            href: e_commerce_products_detail_path,
-            content: _('Products Detail')
-          },
-        ]
-      },
-      {
-        href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-windows'></i> <span class='menu-item-parent'>" + _('Miscellaneous') + "</span>",
-        children: [
-          {
-            href: miscellaneous_pricing_tables_path,
-            content: _('Pricing Tables')
-          },
-          {
-            href: miscellaneous_invoice_path,
-            content: _('Invoice')
-          },
           {
             href: miscellaneous_login_path,
             content: _('Login')
