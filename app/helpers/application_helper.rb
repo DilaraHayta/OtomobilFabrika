@@ -171,7 +171,7 @@ module ApplicationHelper
       },
       {
         href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-bar-chart-o'></i> <span class='menu-item-parent'>" + _('Graphs') + "</span>",
+        content: "<i class='fa fa-lg fa-fw fa-bar-chart-o'></i> <span class='menu-item-parent'>" + _('Grafikler') + "</span>",
         children: [
           {
             href: graphs_flot_chart_path,
@@ -199,7 +199,7 @@ module ApplicationHelper
           },
           {
             href: graphs_highchart_table_path,
-            content: "" + _('HighchartTable') + " <span class='badge pull-right inbox-badge bg-color-yellow'>" + _('new') + "</span>"
+            content: "" + _('HighchartTable') + " <span class='badge pull-right inbox-badge bg-color-yellow'></span>"
           },
         ]
       },
@@ -209,11 +209,11 @@ module ApplicationHelper
       },
       {
         href: '#',
-        content: "<i class='fa fa-lg fa-fw fa-cloud'><em>3</em></i> <span class='menu-item-parent'>" + _('Cool Features!') + "</span>",
+        content: "<i class='fa fa-lg fa-fw fa-cloud'></i> <span class='menu-item-parent'>" + _('Cool Özellikler') + "</span>",
         children: [
           {
             href: cool_features_calendar_path,
-            content: "<i class='fa fa-lg fa-fw fa-calendar'></i> <span class='menu-item-parent'>" + _('Calendar') + "</span>"
+            content: "<i class='fa fa-lg fa-fw fa-calendar'></i> <span class='menu-item-parent'>" + _('Takvim') + "</span>"
           }
         ]
       },
