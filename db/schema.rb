@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180605035547) do
+ActiveRecord::Schema.define(version: 20180605042005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,13 +21,13 @@ ActiveRecord::Schema.define(version: 20180605035547) do
     t.date     "deliveryDate"
     t.string   "adet"
     t.string   "fiyat"
-    t.boolean  "status"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "car_id"
     t.integer  "part_id"
     t.string   "cname"
     t.string   "pname"
+    t.string   "status"
     t.index ["car_id"], name: "index_car_orders_on_car_id", using: :btree
     t.index ["part_id"], name: "index_car_orders_on_part_id", using: :btree
   end

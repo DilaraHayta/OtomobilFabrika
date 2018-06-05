@@ -15,14 +15,19 @@
 
     <div class="row">
 
-      <section class="col col-6">
+      <section class="col col-4">
         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
           <%= f.text_field :adet , placeholder: 'Adet'%>
         </label>
       </section>
-      <section class="col col-6">
+      <section class="col col-4">
         <label class="input">
           Teslim Tarihi : <%= f.date_select :deliveryDate %>
+        </label>
+      </section>
+      <section class="col col-4">
+        <label class="select">
+          <%= f.select :status, options_for_select([["Durum Seçiniz", ""], "Pending", "Delivered", "Error","Complete", "Incomplete","Refunded"]) %>
         </label>
       </section>
     </div>
@@ -34,15 +39,15 @@
         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
           <%= f.text_field :fiyat, placeholder: 'Fiyat'%>
         </label>
-</section>  
+</section>
     <section class="col col-4">
       <label class="select">
-        <%= f.select :cname, options_for_select([["Müşteri Seçiniz", ""], "Micra 1993-2002", "Bayi-2", "Bayi-3"]) %>
+        <%= f.select :cname, options_for_select([["Otomobil Seçiniz", ""], "Micra 1993-2002", "Micra 2003-2009", "Pirimera 1997-2002","Pirimera 2003-2008","Qashqai 2006-2010","Sunny 1990-1995"]) %>
       </label>
     </section>
     <section class="col col-4">
       <label class="select">
-        <%= f.select :pname, options_for_select([["Müşteri Seçiniz", ""], "Bayi-1", "Bayi-2", "Bayi-3"]) %>
+        <%= f.select :pname, options_for_select([["Parça Seçiniz", ""], "Kaporta", "Motor", "Amortisörler", "Fren Aksamı", "Vites Şanzıman", "Mekanik", "Radyatör"]) %>
       </label>
     </section>
 </div>
