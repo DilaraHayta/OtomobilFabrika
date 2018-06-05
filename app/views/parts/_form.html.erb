@@ -1,14 +1,19 @@
 <%= form_for @part, html: { class: "smart-form", id: "checkout-form" } do |f| %>
   <fieldset>
     <div class="row">
-      <section class="col col-6">
+      <section class="col col-4">
         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
           <%= f.text_field :name, placeholder: 'Parça Adı'%>
         </label>
       </section>
-      <section class="col col-6">
+      <section class="col col-4">
         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
           <%= f.text_field :part_no, placeholder: 'Parça Numarası'%>
+        </label>
+      </section>
+      <section class="col col-4">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :part_count, placeholder: 'Adet'%>
         </label>
       </section>
     </div>
@@ -22,6 +27,18 @@
       <section class="col col-6">
         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
           <%= f.text_field :price, placeholder: 'Fiyat'%>
+        </label>
+      </section>
+    </div>
+    <div class="row">
+      <section class="col col-6">
+        <label class="select">
+          <%= f.select :category, options_for_select([["Kategori Seçiniz", ""], "Kaporta", "Motor", "Amortisörler", "Fren Aksamı", "Vites Şanzıman", "Mekanik", "Radyatör"]) %>
+        </label>
+      </section>
+      <section class="col col-6">
+        <label class="select">
+          <%= f.select(:car_id, Car.all.collect {|u| [u.name, u.id]}, :prompt => 'Otomobil Adı Seç') %>
         </label>
       </section>
     </div>

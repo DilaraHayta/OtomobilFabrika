@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @car_order.customer %>
+</p>
+
+<p>
+  <strong>Orderdate:</strong>
+  <%= @car_order.orderDate %>
+</p>
+
+<p>
+  <strong>Deliverydate:</strong>
+  <%= @car_order.deliveryDate %>
+</p>
+
+<p>
+  <strong>Adet:</strong>
+  <%= @car_order.adet %>
+</p>
+
+<p>
+  <strong>Fiyat:</strong>
+  <%= @car_order.fiyat %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @car_order.status %>
+</p>
+
+<%= link_to 'Edit', edit_car_order_path(@car_order) %> |
+<%= link_to 'Back', car_orders_path %>

@@ -11416,3 +11416,2304 @@ Processing by ECommerceController#orders as HTML
 Completed 200 OK in 365ms (Views: 361.2ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-05 01:08:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (25.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by DashboardController#analytics as HTML
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["sign_in_count", 2], ["current_sign_in_at", 2018-06-04 22:08:10 UTC], ["updated_at", 2018-06-04 22:08:10 UTC], ["id", 1]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering dashboard/analytics.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2018-06-05 01:08:11 +0300
+Processing by DashboardController#analytics as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 3], ["current_sign_in_at", 2018-06-04 22:08:11 UTC], ["last_sign_in_at", 2018-06-04 22:08:10 UTC], ["updated_at", 2018-06-04 22:08:11 UTC], ["id", 1]]
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering dashboard/analytics.html.erb within layouts/application
+  Rendered dashboard/analytics.html.erb within layouts/application (6632.5ms)
+  Rendered dashboard/analytics.html.erb within layouts/application (6417.1ms)
+  Rendered layouts/_header.html.erb (34.2ms)
+  Rendered layouts/_header.html.erb (40.9ms)
+  Rendered layouts/_left_panel.html.erb (36.8ms)
+  Rendered layouts/_left_panel.html.erb (29.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.4ms)
+  Rendered layouts/_tiles.html.erb (1.8ms)
+Completed 200 OK in 9131ms (Views: 8908.7ms | ActiveRecord: 105.3ms)
+
+
+Completed 200 OK in 8672ms (Views: 8638.9ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 01:08:43 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (73.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (86.3ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_left_panel.html.erb (23.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 571ms (Views: 469.3ms | ActiveRecord: 76.5ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 01:08:50 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  Rendered parts/_form.html.erb (24.4ms)
+  Rendered parts/new.html.erb within layouts/application (31.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (13.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.3ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 371ms (Views: 359.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 01:08:53 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (15.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 350ms (Views: 342.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/parts/1" for 127.0.0.1 at 2018-06-05 01:09:09 +0300
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_left_panel.html.erb (16.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 373ms (Views: 340.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/parts/1/edit" for 127.0.0.1 at 2018-06-05 01:09:18 +0300
+Processing by PartsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/edit.html.erb within layouts/application
+  Rendered parts/_form.html.erb (2.6ms)
+  Rendered parts/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_left_panel.html.erb (14.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 375ms (Views: 355.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 01:09:21 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (13.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.3ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 337.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 01:09:23 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (25.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (45.8ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_left_panel.html.erb (16.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 407ms (Views: 347.1ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2018-06-05 01:09:31 +0300
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (2.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (16.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 339ms (Views: 324.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/miscellaneous/invoice" for 127.0.0.1 at 2018-06-05 01:09:49 +0300
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:MiscellaneousController> at /home/dilara/Desktop/full/app/controllers/miscellaneous_controller.rb:2)
+Processing by MiscellaneousController#invoice as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering miscellaneous/invoice.html.erb within layouts/application
+  Rendered miscellaneous/invoice.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (30.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 367ms (Views: 350.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/e_commerce/orders" for 127.0.0.1 at 2018-06-05 01:10:11 +0300
+Processing by ECommerceController#orders as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering e_commerce/orders.html.erb within layouts/application
+  Rendered e_commerce/orders.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (15.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+Completed 200 OK in 330ms (Views: 316.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (38.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 01:45:35 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_left_panel.html.erb (13.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 1734ms (Views: 1714.9ms | ActiveRecord: 4.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCarCountToCars (20180604224816)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (76.4ms)[0m  [1m[35mALTER TABLE "cars" ADD "car_count" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180604224816"]]
+  [1m[35m (22.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 01:53:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (13.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 338ms (Views: 324.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 01:53:51 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (12.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 352ms (Views: 342.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-05 01:53:53 +0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (17.0ms)
+  Rendered cars/new.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (13.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 353ms (Views: 350.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-05 01:54:24 +0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (1.9ms)
+  Rendered cars/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (12.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 320ms (Views: 315.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-05 01:54:48 +0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (2.1ms)
+  Rendered cars/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (12.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 336ms (Views: 333.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 01:55:41 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (13.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (2.5ms)
+  Rendered layouts/_scripts.html.erb (0.5ms)
+Completed 200 OK in 320ms (Views: 316.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 01:55:48 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (14.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 362ms (Views: 358.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cars/1/edit" for 127.0.0.1 at 2018-06-05 01:55:51 +0300
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/_form.html.erb (2.7ms)
+  Rendered cars/edit.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_left_panel.html.erb (16.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 353ms (Views: 340.5ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/cars/1" for 127.0.0.1 at 2018-06-05 01:55:56 +0300
+Processing by CarsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AdbQ5ZhY3qYEhbrJ8z7hbFAL2YOKZJJ2TddXcw0dpyCSkL9s9RMJkEcfgZUzift8S2gwxN2jk9SF+YesuAwrLA==", "car"=>{"name"=>"Micra", "year"=>"1998", "fuel"=>"Benzin", "series"=>"1.3 GX ", "state"=>"0", "car_count"=>"10", "price"=>"2907", "desc"=>"O artık daha göz alıcı ve daha teknolojik. Stil sahibi arka spoyleri, sportif ön ızgarası ve benzersiz tasarımıyla Nissan Micra, keyif kaynağınız olacak."}, "commit"=>"Kaydet", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "cars" SET "car_count" = $1, "updated_at" = $2 WHERE "cars"."id" = $3[0m  [["car_count", 10], ["updated_at", 2018-06-04 22:55:56 UTC], ["id", 1]]
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 41ms (ActiveRecord: 33.2ms)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2018-06-05 01:55:56 +0300
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_left_panel.html.erb (12.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 324ms (Views: 321.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 01:56:02 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (28.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 329ms (Views: 325.5ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPartCountToParts (20180604225842)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.3ms)[0m  [1m[35mALTER TABLE "parts" ADD "part_count" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180604225842"]]
+  [1m[35m (30.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:00:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (14.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 334ms (Views: 312.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/parts/1/edit" for 127.0.0.1 at 2018-06-05 02:00:43 +0300
+Processing by PartsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/edit.html.erb within layouts/application
+  Rendered parts/_form.html.erb (1.6ms)
+  Rendered parts/edit.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_left_panel.html.erb (12.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 336ms (Views: 330.1ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/parts/1" for 127.0.0.1 at 2018-06-05 02:00:49 +0300
+Processing by PartsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOYxlW5N8Vkr8cqAOjfAC1B9tuoSZHF3+bQHBhDJ220HoF4cAwYmb2hr8dz6gNobSx5frUWjcNUxmtfZpdhXYQ==", "part"=>{"name"=>"MICRA ÖN FAR SOL", "part_no"=>"57617", "part_count"=>"23", "desc"=>"Uyumlu Olduğu Model:1993>1997", "price"=>"90"}, "commit"=>"Kaydet", "id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.5ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "parts" SET "part_count" = $1, "updated_at" = $2 WHERE "parts"."id" = $3[0m  [["part_count", 23], ["updated_at", 2018-06-04 23:00:49 UTC], ["id", 1]]
+  [1m[35m (81.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/parts/1
+Completed 302 Found in 91ms (ActiveRecord: 83.5ms)
+
+
+Started GET "/parts/1" for 127.0.0.1 at 2018-06-05 02:00:49 +0300
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.7ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 337.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:00:51 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (13.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 358ms (Views: 354.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 02:11:21 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (15.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 434ms (Views: 427.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/e_commerce/orders" for 127.0.0.1 at 2018-06-05 02:12:55 +0300
+Processing by ECommerceController#orders as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering e_commerce/orders.html.erb within layouts/application
+  Rendered e_commerce/orders.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (16.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+Completed 200 OK in 380ms (Views: 377.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryToParts (20180604231840)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "parts" ADD "category" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180604231840"]]
+  [1m[35m (26.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5009.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5008.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (375.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[35m (1977.0ms)[0m  [1m[35mCREATE DATABASE "myproject" ENCODING = 'utf8'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "myproject" ENCODING = 'utf8'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (127.3ms)[0m  [1m[35mCREATE TABLE "cars" ("id" serial primary key, "name" character varying, "year" integer, "fuel" character varying, "series" character varying, "state" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "desc" character varying, "price" character varying, "car_count" integer)[0m
+  [1m[35m (109.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (109.0ms)[0m  [1m[35mCREATE TABLE "parts" ("id" serial primary key, "desc" character varying, "name" character varying, "price" character varying, "part_no" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "part_count" integer, "category" character varying)[0m
+  [1m[35m (92.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (63.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (63.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (108.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20180604231840')[0m
+  [1m[35m (10.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20180604035741'), ('20180604225842'), ('20180604082556'), ('20180604061118'), ('20160907132658'), ('20180604050737'), ('20180604224816');
+
+[0m
+  [1m[35m (119.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2018-06-04 23:25:12 UTC], ["updated_at", 2018-06-04 23:25:12 UTC]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.9ms)[0m  [1m[35mDROP TABLE "cars" CASCADE[0m
+  [1m[35m (99.0ms)[0m  [1m[35mCREATE TABLE "cars" ("id" serial primary key, "name" character varying, "year" integer, "fuel" character varying, "series" character varying, "state" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "desc" character varying, "price" character varying, "car_count" integer)[0m
+  [1m[35m (9.7ms)[0m  [1m[35mDROP TABLE "categories" CASCADE[0m
+  [1m[35m (121.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mDROP TABLE "parts" CASCADE[0m
+  [1m[35m (88.2ms)[0m  [1m[35mCREATE TABLE "parts" ("id" serial primary key, "desc" character varying, "name" character varying, "price" character varying, "part_no" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "part_count" integer, "category" character varying)[0m
+  [1m[35m (9.4ms)[0m  [1m[35mDROP TABLE "users" CASCADE[0m
+  [1m[35m (86.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sd@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sd@gmail.com"], ["encrypted_password", "$2a$11$hY78u0CvdXyzTkBU6vZnCOWRbKvNvYJtmiCWsxJpkK6kz.bX45jtG"], ["created_at", 2018-06-04 23:25:13 UTC], ["updated_at", 2018-06-04 23:25:13 UTC]]
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "smartadmin@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "smartadmin@example.org"], ["encrypted_password", "$2a$11$31JPcTJMimfEhmldntmy.ejp8T.x0gSdNRC05iKas.bwgpDXIHjvy"], ["created_at", 2018-06-04 23:25:13 UTC], ["updated_at", 2018-06-04 23:25:13 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sd@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "smartadmin@example.org"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/e_commerce/orders" for 127.0.0.1 at 2018-06-05 02:25:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by ECommerceController#orders as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 34ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-05 02:25:44 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3136.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 3832ms (Views: 3782.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-05 02:25:52 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"szxszOwA1ag2+LQkV1SuXAeYoi6GlfO1Xec1ISNTsswgegNFgUsCnnVij3iX47RMHPtLadFS8heVyeX+lkI+wA==", "user"=>{"email"=>"sd@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sd@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", 2018-06-04 23:25:52 UTC], ["updated_at", 2018-06-04 23:25:52 UTC], ["id", 1]]
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2018-06-04 23:25:52 UTC], ["last_sign_in_at", 2018-06-04 23:25:52 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2018-06-04 23:25:52 UTC], ["id", 1]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/e_commerce/orders
+Completed 302 Found in 460ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/e_commerce/orders" for 127.0.0.1 at 2018-06-05 02:25:53 +0300
+Processing by ECommerceController#orders as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering e_commerce/orders.html.erb within layouts/application
+  Rendered e_commerce/orders.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_left_panel.html.erb (24.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+Completed 200 OK in 367ms (Views: 362.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:25:57 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.5ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (15.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 354ms (Views: 348.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 02:25:59 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (14.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 338ms (Views: 329.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 02:26:06 +0300
+Processing by DashboardController#analytics as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/analytics.html.erb within layouts/application
+  Rendered dashboard/analytics.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_left_panel.html.erb (15.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+Completed 200 OK in 329ms (Views: 325.6ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5008.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (333.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myproject"[0m
+  [1m[35m (769.5ms)[0m  [1m[35mCREATE DATABASE "myproject" ENCODING = 'utf8'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "myproject" ENCODING = 'utf8'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (137.7ms)[0m  [1m[35mCREATE TABLE "cars" ("id" serial primary key, "name" character varying, "year" integer, "fuel" character varying, "series" character varying, "state" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "desc" character varying, "price" character varying, "car_count" integer)[0m
+  [1m[35m (97.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (98.2ms)[0m  [1m[35mCREATE TABLE "parts" ("id" serial primary key, "desc" character varying, "name" character varying, "price" character varying, "part_no" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "part_count" integer)[0m
+  [1m[35m (103.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (64.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (120.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20180604231840')[0m
+  [1m[35m (10.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20180604035741'), ('20180604225842'), ('20180604082556'), ('20180604061118'), ('20160907132658'), ('20180604050737'), ('20180604224816');
+
+[0m
+  [1m[35m (108.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2018-06-04 23:28:25 UTC], ["updated_at", 2018-06-04 23:28:25 UTC]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE "cars" CASCADE[0m
+  [1m[35m (99.4ms)[0m  [1m[35mCREATE TABLE "cars" ("id" serial primary key, "name" character varying, "year" integer, "fuel" character varying, "series" character varying, "state" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "desc" character varying, "price" character varying, "car_count" integer)[0m
+  [1m[35m (9.7ms)[0m  [1m[35mDROP TABLE "categories" CASCADE[0m
+  [1m[35m (134.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE "parts" CASCADE[0m
+  [1m[35m (99.5ms)[0m  [1m[35mCREATE TABLE "parts" ("id" serial primary key, "desc" character varying, "name" character varying, "price" character varying, "part_no" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "part_count" integer)[0m
+  [1m[35m (9.6ms)[0m  [1m[35mDROP TABLE "users" CASCADE[0m
+  [1m[35m (108.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (63.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (64.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sd@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sd@gmail.com"], ["encrypted_password", "$2a$11$QbOeeojubIwATkzGub8r8OhrQu8eVyu.JmzytPKr..zMhl4Lpx3NK"], ["created_at", 2018-06-04 23:28:25 UTC], ["updated_at", 2018-06-04 23:28:25 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "smartadmin@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "smartadmin@example.org"], ["encrypted_password", "$2a$11$0zrRYjea9BVXy0JYJyqvaeoWTkbnTGigReLaXqKueDvLUuWzuucm."], ["created_at", 2018-06-04 23:28:26 UTC], ["updated_at", 2018-06-04 23:28:26 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sd@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "smartadmin@example.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for 127.0.0.1 at 2018-06-05 02:29:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by DashboardController#analytics as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 42ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-05 02:29:17 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1856.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 2482ms (Views: 2479.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-05 02:29:25 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"33sub5TJb132g9R9bYK8tGIAn0JsZUjliy/vWnXRYt7n1NYyRNT8UN99I0mldimPt6EgAxsR2G5KOQt8+Wb5HQ==", "user"=>{"email"=>"sd@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sd@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", 2018-06-04 23:29:25 UTC], ["updated_at", 2018-06-04 23:29:25 UTC], ["id", 1]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2018-06-04 23:29:25 UTC], ["last_sign_in_at", 2018-06-04 23:29:25 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2018-06-04 23:29:25 UTC], ["id", 1]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 236ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 02:29:25 +0300
+Processing by DashboardController#analytics as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/analytics.html.erb within layouts/application
+  Rendered dashboard/analytics.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_left_panel.html.erb (18.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+Completed 200 OK in 341ms (Views: 338.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCarRefToParts (20180604233035)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "parts" ADD "car_id" integer[0m
+  [1m[35m (102.8ms)[0m  [1m[35mCREATE  INDEX  "index_parts_on_car_id" ON "parts"  ("car_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "parts" ADD CONSTRAINT "fk_rails_e7275a008c"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180604233035"]]
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryToParts (20180604233138)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "parts" ADD "category" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180604233138"]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:35:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.5ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (13.9ms)
+  Rendered layouts/_left_panel.html.erb (12.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 336ms (Views: 314.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:35:12 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  Rendered parts/_form.html.erb (2.1ms)
+  Rendered parts/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_left_panel.html.erb (34.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 347ms (Views: 335.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:40:12 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered parts/_form.html.erb (20.0ms)
+  Rendered parts/new.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 12.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Car with 'id'=all):
+  
+app/views/parts/_form.html.erb:37:in `block in _app_views_parts__form_html_erb___2204642408241428898_70148415484320'
+app/views/parts/_form.html.erb:1:in `_app_views_parts__form_html_erb___2204642408241428898_70148415484320'
+app/views/parts/new.html.erb:87:in `_app_views_parts_new_html_erb__867288271588032334_70148541967440'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.9ms)
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 02:41:01 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_left_panel.html.erb (17.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 352ms (Views: 348.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-05 02:41:02 +0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (3.3ms)
+  Rendered cars/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_left_panel.html.erb (13.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 345ms (Views: 332.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-06-05 02:41:16 +0300
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y1+m1cmQvem+6/VNSs5CwRewrZ08TLBeNKn+1gXBU0GKdZMB5NZLyadroTjog3dJo7PZhklmhVWEbL2k+e5K4Q==", "car"=>{"name"=>"Micra", "year"=>"2015", "fuel"=>"Benzin", "series"=>"1.3 GX ", "state"=>"1", "car_count"=>"10", "price"=>"2907", "desc"=>"ahrdjtdyjd"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("name", "year", "fuel", "series", "state", "created_at", "updated_at", "desc", "price", "car_count") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Micra"], ["year", 2015], ["fuel", "Benzin"], ["series", "1.3 GX "], ["state", true], ["created_at", 2018-06-04 23:41:16 UTC], ["updated_at", 2018-06-04 23:41:16 UTC], ["desc", "ahrdjtdyjd"], ["price", "2907"], ["car_count", 10]]
+  [1m[35m (58.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 64ms (ActiveRecord: 59.5ms)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2018-06-05 02:41:16 +0300
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 324ms (Views: 320.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 02:41:19 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (14.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.5ms)
+Completed 200 OK in 330ms (Views: 326.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:41:26 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.5ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (17.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 361ms (Views: 355.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:41:27 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  Rendered parts/_form.html.erb (3.5ms)
+  Rendered parts/new.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Car with 'id'=all):
+  
+app/views/parts/_form.html.erb:37:in `block in _app_views_parts__form_html_erb___2204642408241428898_70148413440360'
+app/views/parts/_form.html.erb:1:in `_app_views_parts__form_html_erb___2204642408241428898_70148413440360'
+app/views/parts/new.html.erb:87:in `_app_views_parts_new_html_erb__867288271588032334_47008143927600'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:41:47 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered parts/_form.html.erb (15.8ms)
+  Rendered parts/new.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for #<Car:0x007f997610b820>):
+    34:       <section class="col col-6">
+    35:         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+    36:           <%= f.text_field :category, placeholder: 'Kategori'%>
+    37:           <%= f.select(:car_id, Car.find(1).collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
+    38:         </label>
+    39:       </section>
+    40:       <section class="col col-6">
+  
+app/views/parts/_form.html.erb:37:in `block in _app_views_parts__form_html_erb___2204642408241428898_70148411468800'
+app/views/parts/_form.html.erb:1:in `_app_views_parts__form_html_erb___2204642408241428898_70148411468800'
+app/views/parts/new.html.erb:87:in `_app_views_parts_new_html_erb__867288271588032334_70148543830460'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:42:17 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (21.1ms)
+  Rendered parts/new.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_left_panel.html.erb (14.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 364ms (Views: 359.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:42:44 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.3ms)
+  Rendered parts/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (12.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 336ms (Views: 330.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:42:59 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (2.5ms)
+  Rendered parts/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (12.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 318ms (Views: 314.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:43:30 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.8ms)
+  Rendered parts/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (12.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 314ms (Views: 310.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/forms/smart_form_layouts" for 127.0.0.1 at 2018-06-05 02:43:41 +0300
+Processing by FormsController#smart_form_layouts as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering forms/smart_form_layouts.html.erb within layouts/application
+  Rendered forms/smart_form_layouts.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_left_panel.html.erb (14.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+Completed 200 OK in 384ms (Views: 364.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:44:34 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.6ms)
+  Rendered parts/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (11.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 380ms (Views: 375.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:45:06 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (4.6ms)
+  Rendered parts/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_left_panel.html.erb (15.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 376ms (Views: 371.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:46:08 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (4.4ms)
+  Rendered parts/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_left_panel.html.erb (16.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+  Rendered layouts/_tiles.html.erb (2.4ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 372ms (Views: 366.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:46:15 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.9ms)
+  Rendered parts/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (15.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 341ms (Views: 337.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:46:29 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (2.9ms)
+  Rendered parts/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (12.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 331ms (Views: 327.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:46:44 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.2ms)
+  Rendered parts/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 333ms (Views: 329.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:47:37 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.1ms)
+  Rendered parts/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (15.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 326ms (Views: 321.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:47:45 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (2.4ms)
+  Rendered parts/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (14.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 319ms (Views: 316.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:48:43 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (6.4ms)
+  Rendered parts/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (17.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.7ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 338ms (Views: 332.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:49:01 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.8ms)
+  Rendered parts/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (13.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.8ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 323.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 02:49:13 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQnT8EtS6S0s0f5hQjhl2X9ph8jIXfQ2zbMl3fIl+rk8I+YkZhQfDTVRqhTgdVBRy2rz0713wT19dmavDgrjGQ==", "part"=>{"name"=>"", "part_no"=>"", "part_count"=>"", "desc"=>"", "price"=>"", "car_id"=>"1"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "parts" ("desc", "name", "price", "part_no", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["desc", ""], ["name", ""], ["price", ""], ["part_no", ""], ["created_at", 2018-06-04 23:49:13 UTC], ["updated_at", 2018-06-04 23:49:13 UTC], ["car_id", 1]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/parts/1
+Completed 302 Found in 54ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/parts/1" for 127.0.0.1 at 2018-06-05 02:49:13 +0300
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_left_panel.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 322ms (Views: 317.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:49:17 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (14.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 338ms (Views: 334.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/parts/1" for 127.0.0.1 at 2018-06-05 02:49:22 +0300
+Processing by PartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Bit6sHRY3MDxY1sB8gaBQOYD8nIHam5olCpCwjY8ytFHAU9kWR4q4OjjD3RQS7TIUgCGaXJAW2Mk7wGwyhPTcQ==", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "parts" WHERE "parts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/parts
+Completed 302 Found in 26ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:49:22 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_left_panel.html.erb (16.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 351ms (Views: 348.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:51:02 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_left_panel.html.erb (14.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 340ms (Views: 336.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 02:51:04 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.8ms)
+  Rendered parts/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_left_panel.html.erb (29.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 341ms (Views: 332.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 02:51:15 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HHXhvdXCnnFxlauMMmi60RF/4UZFh62Nf/nNMUmXJ5ZdX9Rp+IRoUWgV//mQJY9ZpXyVXTCtmIbPPI5Dtbg+Ng==", "part"=>{"name"=>"", "part_no"=>"", "part_count"=>"", "desc"=>"", "price"=>"", "category"=>"Home", "car_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.2ms)
+  Rendered parts/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (12.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 353ms (Views: 347.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 02:52:15 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"enjuzcm00/P1dG5gLM8ptOCDOD+UDLwZGnjcBc+fdWA7UtsZ5PIl0+z0OhWOghw8VIBMJOEmiRKqvZ93M7BswA==", "part"=>{"name"=>"sdfs", "part_no"=>"ssfs", "part_count"=>"23", "desc"=>"Uyumlu Olduğu Model:1993>1997", "price"=>"sdf", "category"=>"Cell", "car_id"=>"1"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "parts" ("desc", "name", "price", "part_no", "created_at", "updated_at", "part_count", "car_id", "category") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["desc", "Uyumlu Olduğu Model:1993>1997"], ["name", "sdfs"], ["price", "sdf"], ["part_no", "ssfs"], ["created_at", 2018-06-04 23:52:15 UTC], ["updated_at", 2018-06-04 23:52:15 UTC], ["part_count", 23], ["car_id", 1], ["category", "Cell"]]
+  [1m[35m (58.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/parts/2
+Completed 302 Found in 65ms (ActiveRecord: 59.2ms)
+
+
+Started GET "/parts/2" for 127.0.0.1 at 2018-06-05 02:52:15 +0300
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_left_panel.html.erb (12.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 319ms (Views: 313.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 02:52:18 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_left_panel.html.erb (17.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 331ms (Views: 327.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 03:01:14 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (12.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.6ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 339.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 03:01:17 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.1ms)
+  Rendered parts/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (24.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 347ms (Views: 342.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 03:01:45 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (4.3ms)
+  Rendered parts/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (12.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 352ms (Views: 347.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 03:01:58 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (4.5ms)
+  Rendered parts/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_left_panel.html.erb (24.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+  Rendered layouts/_tiles.html.erb (2.6ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 431ms (Views: 426.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 03:02:11 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bdzie47EUcXCJ9wA3sOTSGsWqtEaaY4XqOT5CFTkbpVE9tevo4Kn5duniHV8jqbA3xXeym9DuxwYIbp6qMt3NQ==", "part"=>{"name"=>"MICRA ÖN FAR SOL", "part_no"=>"57617", "part_count"=>"23", "desc"=>"Uyumlu Olduğu Model:1993>1997", "price"=>"90", "category"=>"Motor", "car_id"=>"Micra"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.4ms)
+  Rendered parts/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (13.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 356ms (Views: 348.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 03:02:53 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bdzie47EUcXCJ9wA3sOTSGsWqtEaaY4XqOT5CFTkbpVE9tevo4Kn5duniHV8jqbA3xXeym9DuxwYIbp6qMt3NQ==", "part"=>{"name"=>"MICRA ÖN FAR SOL", "part_no"=>"57617", "part_count"=>"23", "desc"=>"Uyumlu Olduğu Model:1993>1997", "price"=>"90", "category"=>"Motor", "car_id"=>"Micra"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (3.6ms)
+  Rendered parts/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_left_panel.html.erb (12.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.3ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 324ms (Views: 317.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 03:02:57 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdOkjEQ0CnMSB3wS2rLNy/ChGj9CElx3OyhJaqI+G/rM+ZFYaXL8UwuHKGd4//hDRKJuJDc4aXyL7QoYXhECWg==", "part"=>{"name"=>"MICRA ÖN FAR SOL", "part_no"=>"57617", "part_count"=>"23", "desc"=>"Uyumlu Olduğu Model:1993>1997", "price"=>"90", "category"=>"Kaporta", "car_id"=>"1"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "parts" ("desc", "name", "price", "part_no", "created_at", "updated_at", "part_count", "car_id", "category") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["desc", "Uyumlu Olduğu Model:1993>1997"], ["name", "MICRA ÖN FAR SOL"], ["price", "90"], ["part_no", "57617"], ["created_at", 2018-06-05 00:02:57 UTC], ["updated_at", 2018-06-05 00:02:57 UTC], ["part_count", 23], ["car_id", 1], ["category", "Kaporta"]]
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/parts/3
+Completed 302 Found in 41ms (ActiveRecord: 34.7ms)
+
+
+Started GET "/parts/3" for 127.0.0.1 at 2018-06-05 03:02:57 +0300
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_left_panel.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 326ms (Views: 323.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 03:02:59 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (14.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 339ms (Views: 335.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 03:04:58 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (13.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 352ms (Views: 345.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 03:05:22 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (14.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 332ms (Views: 327.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 03:06:02 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.5ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_left_panel.html.erb (14.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 352ms (Views: 347.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 03:30:39 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_left_panel.html.erb (15.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 329ms (Views: 326.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 03:30:42 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (15.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 321.8ms | ActiveRecord: 1.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCarOrders (20180605004011)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.8ms)[0m  [1m[35mCREATE TABLE "car_orders" ("id" serial primary key, "customer" character varying, "orderDate" date, "deliveryDate" date, "adet" character varying, "fiyat" character varying, "status" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180605004011"]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'car_orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/partOrer" for 127.0.0.1 at 2018-06-05 03:40:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/partOrer"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [112 times] (55.1ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (1.6ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (134.9ms)
+Started GET "/partOrder" for 127.0.0.1 at 2018-06-05 03:40:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/partOrder"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [112 times] (37.9ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.0ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.8ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.7ms)
+Started GET "/partOrders" for 127.0.0.1 at 2018-06-05 03:40:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/partOrders"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [112 times] (36.1ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (1.9ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.8ms)
+Started GET "/carOrders" for 127.0.0.1 at 2018-06-05 03:41:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/carOrders"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [112 times] (35.9ms)
+  Rendered collection of /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.0ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.7ms)
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 03:41:47 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.7ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (13.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 1557ms (Views: 1523.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/dashboards/dashboard-social" for 127.0.0.1 at 2018-06-05 03:42:43 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by DashboardController#social as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/social.html.erb within layouts/application
+  Rendered dashboard/social.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (24.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.5ms)
+Completed 200 OK in 441ms (Views: 419.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 03:42:51 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.5ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_left_panel.html.erb (16.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 363ms (Views: 355.3ms | ActiveRecord: 3.8ms)
+
+

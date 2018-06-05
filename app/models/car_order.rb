@@ -1,0 +1,2 @@
+class CarOrder < ApplicationRecord
+end

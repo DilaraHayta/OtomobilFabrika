@@ -171,7 +171,7 @@ module ApplicationHelper
             content: "<span class='menu-item-parent'>" + _('Parça Siparişi') + "</span>"
           },
           {
-            href: dashboard_social_path,
+            href: car_orders_path,
             title: _('Siparişler'),
             content: "<span class='menu-item-parent'>" + _('Otomobil Siparişi') + "</span>"
           },

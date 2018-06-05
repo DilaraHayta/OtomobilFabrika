@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180604082556) do
+ActiveRecord::Schema.define(version: 20180605004011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "car_orders", force: :cascade do |t|
+    t.string   "customer"
+    t.date     "orderDate"
+    t.date     "deliveryDate"
+    t.string   "adet"
+    t.string   "fiyat"
+    t.boolean  "status"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "cars", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180604082556) do
     t.datetime "updated_at", null: false
     t.string   "desc"
     t.string   "price"
+    t.integer  "car_count"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -40,6 +52,10 @@ ActiveRecord::Schema.define(version: 20180604082556) do
     t.string   "part_no"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "part_count"
+    t.integer  "car_id"
+    t.string   "category"
+    t.index ["car_id"], name: "index_parts_on_car_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,4 +75,5 @@ ActiveRecord::Schema.define(version: 20180604082556) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "parts", "cars"
 end

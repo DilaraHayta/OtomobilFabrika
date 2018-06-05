@@ -34,13 +34,19 @@
 
   <fieldset>
     <div class="row">
-      <section class="col col-6">
+      <section class="col col-4">
         <label class="check_box">
 
           <%= f.check_box :state %>Araç Üretimde
          </label>
       </section>
-      <section class="col col-6">
+      <section class="col col-4">
+        <label class="input"><i class="icon-prepend fa fa-eye"></i>
+
+          <%= f.text_field :car_count, placeholder: 'Adet' %>
+         </label>
+      </section>
+      <section class="col col-4">
         <label class="input"> <i class="icon-prepend fa fa-eye"></i>
           <%= f.text_field :price, placeholder: 'Fiyat'%>
         </label>

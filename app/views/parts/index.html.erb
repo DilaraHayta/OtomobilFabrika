@@ -82,9 +82,11 @@
                     <th data-hide="phone">ID</th>
                     <th data-class="expand"><i class="fa fa-fw fa-eye hidden-md hidden-sm hidden-xs"></i>Parça Numarası</th>
                     <th data-class="expand"><i class="fa fa-fw fa-eye hidden-md hidden-sm hidden-xs"></i>Parça Adı</th>
+                    <th data-class="expand"><i class="fa fa-fw fa-eye hidden-md hidden-sm hidden-xs"></i>Adet</th>
                     <th data-hide="phone"><i class="fa fa-fw fa-eye hidden-md hidden-sm hidden-xs"></i>Açıklaması</th>
                     <th data-hide="phone,tablet">Fiyat</th>
                     <th data-hide="phone,tablet"><i class="fa fa-fw fa-calendar hidden-md hidden-sm hidden-xs"></i>Eklendiği Tarih</th>
+                    <th data-hide="phone,tablet"><i class="fa fa-fw fa-calendar hidden-md hidden-sm hidden-xs"></i>Kategori</th>
                     <th colspan="3">İşlemler</th>
                   </tr>
                 </thead>
@@ -94,9 +96,11 @@
                     <td><%= part.id %></td>
                     <td><%= part.part_no %></td>
                     <td><%= part.name %></td>
+                    <td><%= part.part_count %></td>
                     <td><%= part.desc %></td>
                     <td>$<%= part.price %></td>
-                    <td><%= part.created_at %></td>
+                    <td><%= part.created_at.strftime("%F") %></td>
+                    <td><%= part.category %></td>
                     <td><%= link_to 'Detay', part %></td>
                     <td><%= link_to 'Düzenle', edit_part_path(part) %></td>
                     <td><%= link_to 'Sil', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
