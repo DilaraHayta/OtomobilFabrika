@@ -1,47 +1,59 @@
-<%= form_for(car_order) do |f| %>
-  <% if car_order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(car_order.errors.count, "error") %> prohibited this car_order from being saved:</h2>
-
-      <ul>
-      <% car_order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @car_order, html: { class: "smart-form", id: "checkout-form" } do |f| %>
+  <fieldset>
+    <div class="row">
+      <section class="col col-6">
+        <label class="select">
+          <%= f.select :customer, options_for_select([["Müşteri Seçiniz", ""], "Bayi-1", "Bayi-2", "Bayi-3"]) %>
+        </label>
+      </section>
+      <section class="col col-6">
+        <label class="input">
+          Sipariş Tarihi : <%= f.date_select :orderDate %>
+        </label>
+      </section>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :customer %>
-    <%= f.text_field :customer %>
-  </div>
+    <div class="row">
 
-  <div class="field">
-    <%= f.label :orderDate %>
-    <%= f.date_select :orderDate %>
-  </div>
+      <section class="col col-6">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :adet , placeholder: 'Adet'%>
+        </label>
+      </section>
+      <section class="col col-6">
+        <label class="input">
+          Teslim Tarihi : <%= f.date_select :deliveryDate %>
+        </label>
+      </section>
+    </div>
+  </fieldset>
 
-  <div class="field">
-    <%= f.label :deliveryDate %>
-    <%= f.date_select :deliveryDate %>
-  </div>
+  <fieldset>
+    <div class="row">
+      <section class="col col-4">
+        <label class="input"> <i class="icon-prepend fa fa-eye"></i>
+          <%= f.text_field :fiyat, placeholder: 'Fiyat'%>
+        </label>
+</section>  
+    <section class="col col-4">
+      <label class="select">
+        <%= f.select :cname, options_for_select([["Müşteri Seçiniz", ""], "Micra 1993-2002", "Bayi-2", "Bayi-3"]) %>
+      </label>
+    </section>
+    <section class="col col-4">
+      <label class="select">
+        <%= f.select :pname, options_for_select([["Müşteri Seçiniz", ""], "Bayi-1", "Bayi-2", "Bayi-3"]) %>
+      </label>
+    </section>
+</div>
+  </fieldset>
 
-  <div class="field">
-    <%= f.label :adet %>
-    <%= f.text_field :adet %>
-  </div>
+  <footer>
+    <div class="actions">
+      <%= f.submit 'Kaydet', class:'btn btn-primary'%>
+    </div>
+    <%= link_to 'Geri', car_orders_path, class:'btn btn-primary' %>
+  </footer>
 
-  <div class="field">
-    <%= f.label :fiyat %>
-    <%= f.text_field :fiyat %>
-  </div>
 
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.check_box :status %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

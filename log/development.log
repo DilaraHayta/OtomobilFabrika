@@ -13717,3 +13717,1218 @@ Processing by CarOrdersController#index as HTML
 Completed 200 OK in 363ms (Views: 355.3ms | ActiveRecord: 3.8ms)
 
 
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:21:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q1qtt2yd22W0IgSrWRvTGktKxv4pUCkDModSROC7Kwm5A9ZfUPOQptyEqfu39G2XrPbF07CBztomEYDggePdQg==", "car_order"=>{"customer"=>"Bayi-3", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"5", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"966", "status"=>"0", "part_id"=>"", "car_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: part_id, car_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", "Bayi-3"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", "5"], ["fiyat", "966"], ["status", false], ["created_at", 2018-06-05 03:21:47 UTC], ["updated_at", 2018-06-05 03:21:47 UTC]]
+  [1m[35m (33.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/car_orders/1
+Completed 302 Found in 88ms (ActiveRecord: 41.6ms)
+
+
+Started GET "/car_orders/1" for 127.0.0.1 at 2018-06-05 06:21:47 +0300
+Processing by CarOrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/show.html.erb within layouts/application
+  Rendered car_orders/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (7.5ms)
+  Rendered layouts/_left_panel.html.erb (20.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 2606ms (Views: 2598.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:21:59 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.4ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (16.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 434ms (Views: 430.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 06:22:05 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_left_panel.html.erb (16.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 393ms (Views: 384.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-05 06:22:07 +0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (12.0ms)
+  Rendered cars/new.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (12.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 344ms (Views: 331.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-06-05 06:22:24 +0300
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EhHX+zzK9dqoBNu8enU5p/Q8ncQjtudXAyk+OcpalLHoSKwTAKS+GcCiduyUmocqE4Ce6bpnAI4Xv+ydqwJi+g==", "car"=>{"name"=>"Micra", "year"=>"2015", "fuel"=>"Benzin", "series"=>"1.3 GX ", "state"=>"1", "car_count"=>"10", "price"=>"2907", "desc"=>"If in the future you need to add a general index you can launch this\r\n\r\n"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("name", "year", "fuel", "series", "state", "created_at", "updated_at", "desc", "price", "car_count") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Micra"], ["year", 2015], ["fuel", "Benzin"], ["series", "1.3 GX "], ["state", true], ["created_at", 2018-06-05 03:22:24 UTC], ["updated_at", 2018-06-05 03:22:24 UTC], ["desc", "If in the future you need to add a general index you can launch this\r\n\r\n"], ["price", "2907"], ["car_count", 10]]
+  [1m[35m (119.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 126ms (ActiveRecord: 120.3ms)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2018-06-05 06:22:25 +0300
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_left_panel.html.erb (14.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 338ms (Views: 332.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-05 06:22:27 +0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_left_panel.html.erb (17.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 324ms (Views: 319.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 06:22:29 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (15.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered layouts/_tiles.html.erb (1.4ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 348ms (Views: 340.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 06:22:30 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (5.1ms)
+  Rendered parts/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (12.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 333.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2018-06-05 06:22:48 +0300
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0bL2c30NtUYVhPq0TVsmOlqCytQ/971pTNo2vm35y7gr642bQWP+hX0iV+SjtJi3vT7J+aYmWrBYTOQaDKE98w==", "part"=>{"name"=>"MICRA ÖN FAR SOL", "part_no"=>"57617", "part_count"=>"23", "desc"=>"Uyumlu Olduğu Model:1993>1997", "price"=>"90", "category"=>"Kaporta", "car_id"=>"1"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "parts" ("desc", "name", "price", "part_no", "created_at", "updated_at", "part_count", "car_id", "category") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["desc", "Uyumlu Olduğu Model:1993>1997"], ["name", "MICRA ÖN FAR SOL"], ["price", "90"], ["part_no", "57617"], ["created_at", 2018-06-05 03:22:48 UTC], ["updated_at", 2018-06-05 03:22:48 UTC], ["part_count", 23], ["car_id", 1], ["category", "Kaporta"]]
+  [1m[35m (51.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/parts/1
+Completed 302 Found in 69ms (ActiveRecord: 53.7ms)
+
+
+Started GET "/parts/1" for 127.0.0.1 at 2018-06-05 06:22:49 +0300
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (12.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 323.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 06:22:51 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_left_panel.html.erb (13.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 354ms (Views: 350.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 06:22:54 +0300
+Processing by DashboardController#analytics as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/analytics.html.erb within layouts/application
+  Rendered dashboard/analytics.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (11.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+Completed 200 OK in 319ms (Views: 316.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:22:56 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_left_panel.html.erb (14.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 331ms (Views: 328.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:22:59 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (21.6ms)
+  Rendered car_orders/new.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 358ms (Views: 354.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:23:08 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aAOWX8UuaqLGtc+dKtJR3DZP6BShKc/dcg+zRaDTRp6SWu23+UAhYa4TYs3EPe9R0fPrOTj4KARmmWHhwYuw1Q==", "car_order"=>{"customer"=>"sdf", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "adet"=>"", "fiyat"=>"", "status"=>"0"}, "commit"=>"Create Car order"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", "sdf"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["status", false], ["created_at", 2018-06-05 03:23:08 UTC], ["updated_at", 2018-06-05 03:23:08 UTC]]
+  [1m[35m (73.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/car_orders/2
+Completed 302 Found in 81ms (ActiveRecord: 74.8ms)
+
+
+Started GET "/car_orders/2" for 127.0.0.1 at 2018-06-05 06:23:08 +0300
+Processing by CarOrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering car_orders/show.html.erb within layouts/application
+  Rendered car_orders/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (16.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 332ms (Views: 327.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:23:10 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.5ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (12.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 320ms (Views: 314.9ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'car_orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:24:22 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.3ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (16.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 364ms (Views: 331.2ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:24:25 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kAEbp+XoqoCIz9HnuzW91AGQlfNbwFguL6a8tzgecwYGX+Go/npaWqFkhdwA2h6t7pBelS+5rmsKEhWvbiPhw==", "car_order"=>{"customer"=>"", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "adet"=>"", "fiyat"=>"sdgsdg", "status"=>"0"}, "commit"=>"Create Car order"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", ""], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", "sdgsdg"], ["status", false], ["created_at", 2018-06-05 03:24:25 UTC], ["updated_at", 2018-06-05 03:24:25 UTC]]
+  [1m[35m (211.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/car_orders/3
+Completed 302 Found in 219ms (ActiveRecord: 212.6ms)
+
+
+Started GET "/car_orders/3" for 127.0.0.1 at 2018-06-05 06:24:25 +0300
+Processing by CarOrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering car_orders/show.html.erb within layouts/application
+  Rendered car_orders/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_left_panel.html.erb (13.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 354ms (Views: 348.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:24:28 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (15.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 336ms (Views: 331.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:42:55 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.4ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (12.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 353ms (Views: 332.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:42:57 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.2ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (11.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 329ms (Views: 326.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/smartadmin_intel/prebuilt_skins" for 127.0.0.1 at 2018-06-05 06:43:05 +0300
+Processing by SmartadminIntelController#prebuilt_skins as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering smartadmin_intel/prebuilt_skins.html.erb within layouts/application
+  Rendered smartadmin_intel/prebuilt_skins.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_left_panel.html.erb (15.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 415ms (Views: 368.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/smartadmin_intel/app_layouts" for 127.0.0.1 at 2018-06-05 06:43:21 +0300
+Processing by SmartadminIntelController#app_layouts as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering smartadmin_intel/app_layouts.html.erb within layouts/application
+  Rendered smartadmin_intel/app_layouts.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (13.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 378ms (Views: 356.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:43:47 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_left_panel.html.erb (14.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.5ms)
+Completed 200 OK in 356ms (Views: 352.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:45:19 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.4ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_left_panel.html.erb (14.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 358ms (Views: 352.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:45:33 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.4ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (13.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 333ms (Views: 329.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:45:35 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (10.2ms)
+  Rendered car_orders/new.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    56: 
+    57: 
+    58: 
+    59: <%= form_for @car, html: { class: "smart-form", id: "checkout-form" } do |f| %>
+    60: 
+    61: 
+    62: 
+  
+app/views/car_orders/_form.html.erb:59:in `_app_views_car_orders__form_html_erb___829797735342965096_70004392213720'
+app/views/car_orders/new.html.erb:3:in `_app_views_car_orders_new_html_erb__4215343950397665602_70004392302360'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+Started GET "/parts" for 127.0.0.1 at 2018-06-05 06:46:37 +0300
+Processing by PartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  Rendered parts/index.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_left_panel.html.erb (19.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+  Rendered layouts/_tiles.html.erb (2.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 424ms (Views: 415.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2018-06-05 06:46:39 +0300
+Processing by PartsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parts/new.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered parts/_form.html.erb (23.5ms)
+  Rendered parts/new.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_left_panel.html.erb (13.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 375ms (Views: 367.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:48:12 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.4ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (17.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 347ms (Views: 342.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:48:14 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (163.8ms)
+  Rendered car_orders/new.html.erb within layouts/application (165.6ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f5672462178>:0x007f5656870dd0>):
+    1: <div class="field">
+    2:     <%= f.label :customer %>
+    3:     <%= f.text_field :customer %>
+    4:   </div>
+    5: 
+  
+app/views/car_orders/_form.html.erb:2:in `_app_views_car_orders__form_html_erb___829797735342965096_70004399255340'
+app/views/car_orders/new.html.erb:3:in `_app_views_car_orders_new_html_erb__4215343950397665602_70004397804640'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:50:12 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (115.8ms)
+  Rendered car_orders/new.html.erb within layouts/application (116.6ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f5672462178>:0x007f567249ab18>):
+    1: <div class="field">
+    2:     <%= f.label :customer %>
+    3:     <%= f.text_field :customer %>
+    4:   </div>
+    5: 
+  
+app/views/car_orders/_form.html.erb:2:in `_app_views_car_orders__form_html_erb___829797735342965096_70004399327440'
+app/views/car_orders/new.html.erb:3:in `_app_views_car_orders_new_html_erb__4215343950397665602_70004630674580'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.5ms)
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:50:13 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (139.2ms)
+  Rendered car_orders/new.html.erb within layouts/application (140.9ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f5672462178>:0x007f56724833a0>):
+    1: <div class="field">
+    2:     <%= f.label :customer %>
+    3:     <%= f.text_field :customer %>
+    4:   </div>
+    5: 
+  
+app/views/car_orders/_form.html.erb:2:in `_app_views_car_orders__form_html_erb___829797735342965096_70004630590280'
+app/views/car_orders/new.html.erb:3:in `_app_views_car_orders_new_html_erb__4215343950397665602_70004630629120'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:50:25 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (146.5ms)
+  Rendered car_orders/new.html.erb within layouts/application (147.4ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cars_order_path' for #<#<Class:0x007f5672462178>:0x007f5670c61f60>
+Did you mean?  car_order_path
+               car_orders_path):
+    59:     <div class="actions">
+    60:       <%= f.submit 'Kaydet', class:'btn btn-primary'%>
+    61:     </div>
+    62:     <%= link_to 'Geri', cars_order_path, class:'btn btn-primary' %>
+    63:   </footer>
+    64: 
+    65: 
+  
+app/views/car_orders/_form.html.erb:62:in `block in _app_views_car_orders__form_html_erb___829797735342965096_70004617786960'
+app/views/car_orders/_form.html.erb:11:in `_app_views_car_orders__form_html_erb___829797735342965096_70004617786960'
+app/views/car_orders/new.html.erb:3:in `_app_views_car_orders_new_html_erb__4215343950397665602_70004617977180'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:50:48 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.8ms)
+  Rendered car_orders/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_left_panel.html.erb (16.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 405ms (Views: 399.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:51:16 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (4.9ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (16.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 340.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:51:32 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.3ms)
+  Rendered car_orders/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (12.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 324ms (Views: 319.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:51:45 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (6.5ms)
+  Rendered car_orders/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_left_panel.html.erb (13.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 338ms (Views: 333.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:52:06 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.2ms)
+  Rendered car_orders/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_left_panel.html.erb (14.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 324.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:52:18 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (4.4ms)
+  Rendered car_orders/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (11.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 312ms (Views: 308.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:52:37 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.0ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_left_panel.html.erb (12.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 343.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:52:59 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.6ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (12.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 334ms (Views: 330.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:53:46 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (6.4ms)
+  Rendered car_orders/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (13.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 338ms (Views: 333.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:53:51 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g2w46s+ErXXVsn6NsMB2NNYNNH+7hR/aA/+uTOzJPQd5NUMC8+rmtr0U091eL8i5MbE3UiJU+AMXaXzojZHLTA==", "car_order"=>{"customer"=>"", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "car_id"=>"", "part_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: car_id, part_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["customer", ""], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 03:53:51 UTC], ["updated_at", 2018-06-05 03:53:51 UTC]]
+  [1m[35m (116.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/car_orders/4
+Completed 302 Found in 123ms (ActiveRecord: 117.6ms)
+
+
+Started GET "/car_orders/4" for 127.0.0.1 at 2018-06-05 06:53:51 +0300
+Processing by CarOrdersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.4ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering car_orders/show.html.erb within layouts/application
+  Rendered car_orders/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (14.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 340ms (Views: 333.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:53:54 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.6ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (14.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 326ms (Views: 321.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:54:31 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (4.4ms)
+  Rendered car_orders/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (11.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 361ms (Views: 330.9ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:54:36 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiFwZqx5Yg9NG1FcEFp7sUsuDfu+BSbKlfkCrU2moOWkeAuOkBcpzCW9/Az+tcU8rJIO1ifUwROBb9AJLP5Wrg==", "car_order"=>{"customer"=>"Bayi-1", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "car_id"=>"Bayi-2", "part_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", "Bayi-1"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 03:54:36 UTC], ["updated_at", 2018-06-05 03:54:36 UTC], ["car_id", 0]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "car_orders" violates foreign key constraint "fk_rails_54b94e04a3"
+DETAIL:  Key (car_id)=(0) is not present in table "cars".
+: INSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/car_orders_controller.rb:30:in `block in create'
+app/controllers/car_orders_controller.rb:29:in `create'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580350769254426910);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCnamePnameToCarOrders (20180605035547)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "car_orders" ADD "cname" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "car_orders" ADD "pname" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180605035547"]]
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580350769254426910)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'car_orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cars'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'parts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:56:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dilara/Desktop/full/app/controllers/application_controller.rb:3)
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiFwZqx5Yg9NG1FcEFp7sUsuDfu+BSbKlfkCrU2moOWkeAuOkBcpzCW9/Az+tcU8rJIO1ifUwROBb9AJLP5Wrg==", "car_order"=>{"customer"=>"Bayi-1", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "car_id"=>"Bayi-2", "part_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", "Bayi-1"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 03:56:30 UTC], ["updated_at", 2018-06-05 03:56:30 UTC], ["car_id", 0]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 8.3ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "car_orders" violates foreign key constraint "fk_rails_54b94e04a3"
+DETAIL:  Key (car_id)=(0) is not present in table "cars".
+: INSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/car_orders_controller.rb:30:in `block in create'
+app/controllers/car_orders_controller.rb:29:in `create'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:56:45 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiFwZqx5Yg9NG1FcEFp7sUsuDfu+BSbKlfkCrU2moOWkeAuOkBcpzCW9/Az+tcU8rJIO1ifUwROBb9AJLP5Wrg==", "car_order"=>{"customer"=>"Bayi-1", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "car_id"=>"Bayi-2", "part_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", "Bayi-1"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 03:56:45 UTC], ["updated_at", 2018-06-05 03:56:45 UTC], ["car_id", 0]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "car_orders" violates foreign key constraint "fk_rails_54b94e04a3"
+DETAIL:  Key (car_id)=(0) is not present in table "cars".
+: INSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/car_orders_controller.rb:30:in `block in create'
+app/controllers/car_orders_controller.rb:29:in `create'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:57:06 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiFwZqx5Yg9NG1FcEFp7sUsuDfu+BSbKlfkCrU2moOWkeAuOkBcpzCW9/Az+tcU8rJIO1ifUwROBb9AJLP5Wrg==", "car_order"=>{"customer"=>"Bayi-1", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "car_id"=>"Bayi-2", "part_id"=>""}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["customer", "Bayi-1"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 03:57:06 UTC], ["updated_at", 2018-06-05 03:57:06 UTC], ["car_id", 0]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "car_orders" violates foreign key constraint "fk_rails_54b94e04a3"
+DETAIL:  Key (car_id)=(0) is not present in table "cars".
+: INSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "car_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/car_orders_controller.rb:30:in `block in create'
+app/controllers/car_orders_controller.rb:29:in `create'
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/dilara/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:57:08 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_left_panel.html.erb (16.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (0.9ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 331ms (Views: 325.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:57:10 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.0ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (6.6ms)
+  Rendered layouts/_left_panel.html.erb (15.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 342.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 06:57:15 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j4XLG47UWqpz/Hr541j4mopK1ZSiXLGaLkC6KduUfqh13LDzsroRaRta16kNt0YXbfbWuTuNVkM61miNusyI4w==", "car_order"=>{"customer"=>"Bayi-1", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "cname"=>"Bayi-2", "pname"=>"Bayi-2"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "cname", "pname") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["customer", "Bayi-1"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 03:57:15 UTC], ["updated_at", 2018-06-05 03:57:15 UTC], ["cname", "Bayi-2"], ["pname", "Bayi-2"]]
+  [1m[35m (156.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/car_orders/9
+Completed 302 Found in 164ms (ActiveRecord: 158.2ms)
+
+
+Started GET "/car_orders/9" for 127.0.0.1 at 2018-06-05 06:57:15 +0300
+Processing by CarOrdersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.6ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering car_orders/show.html.erb within layouts/application
+  Rendered car_orders/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (18.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 340ms (Views: 334.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/car_orders" for 127.0.0.1 at 2018-06-05 06:57:20 +0300
+Processing by CarOrdersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/index.html.erb within layouts/application
+  [1m[36mCarOrder Load (0.5ms)[0m  [1m[34mSELECT "car_orders".* FROM "car_orders"[0m
+  Rendered car_orders/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (12.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.4ms)
+Completed 200 OK in 339ms (Views: 334.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:58:31 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (4.8ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_left_panel.html.erb (11.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 341ms (Views: 337.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:59:06 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (4.2ms)
+  Rendered car_orders/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (14.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.3ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 356ms (Views: 350.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:59:28 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.3ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_left_panel.html.erb (26.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_tiles.html.erb (1.2ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 355ms (Views: 351.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:59:30 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.5ms)
+  Rendered car_orders/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_left_panel.html.erb (13.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 340ms (Views: 335.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 06:59:52 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (5.7ms)
+  Rendered car_orders/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_left_panel.html.erb (14.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (3.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 357ms (Views: 351.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 07:00:19 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (4.8ms)
+  Rendered car_orders/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_left_panel.html.erb (13.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.6ms)
+Completed 200 OK in 452ms (Views: 448.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/car_orders/new" for 127.0.0.1 at 2018-06-05 07:00:40 +0300
+Processing by CarOrdersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_orders/new.html.erb within layouts/application
+  Rendered car_orders/_form.html.erb (8.2ms)
+  Rendered car_orders/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_left_panel.html.erb (17.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.0ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 379ms (Views: 374.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/car_orders" for 127.0.0.1 at 2018-06-05 07:00:47 +0300
+Processing by CarOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/jlUc4N3bS0cgpLh2KoqVTgBUE7PwL3Qrqel4/0ThfoEYC+bvxkm7nQkP7E2RZTY371TY1YRWgm6MXdHnEtzsQ==", "car_order"=>{"customer"=>"Bayi-1", "orderDate(1i)"=>"2018", "orderDate(2i)"=>"6", "orderDate(3i)"=>"5", "adet"=>"", "deliveryDate(1i)"=>"2018", "deliveryDate(2i)"=>"6", "deliveryDate(3i)"=>"5", "fiyat"=>"", "cname"=>"Bayi-2", "pname"=>"Bayi-1"}, "commit"=>"Kaydet"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "car_orders" ("customer", "orderDate", "deliveryDate", "adet", "fiyat", "created_at", "updated_at", "cname", "pname") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["customer", "Bayi-1"], ["orderDate", Tue, 05 Jun 2018], ["deliveryDate", Tue, 05 Jun 2018], ["adet", ""], ["fiyat", ""], ["created_at", 2018-06-05 04:00:47 UTC], ["updated_at", 2018-06-05 04:00:47 UTC], ["cname", "Bayi-2"], ["pname", "Bayi-1"]]
+  [1m[35m (23.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/car_orders/10
+Completed 302 Found in 29ms (ActiveRecord: 24.1ms)
+
+
+Started GET "/car_orders/10" for 127.0.0.1 at 2018-06-05 07:00:47 +0300
+Processing by CarOrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarOrder Load (0.3ms)[0m  [1m[34mSELECT  "car_orders".* FROM "car_orders" WHERE "car_orders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering car_orders/show.html.erb within layouts/application
+  Rendered car_orders/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_left_panel.html.erb (14.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_tiles.html.erb (1.1ms)
+  Rendered layouts/_scripts.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 344.5ms | ActiveRecord: 0.7ms)
+
+

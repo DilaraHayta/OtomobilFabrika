@@ -161,21 +161,9 @@ module ApplicationHelper
         ]
       },
       {
-        href: '#',
+        href: car_orders_path,
         title: _('Siparişler'),
         content: "<i class='fa fa-shopping-cart'></i> <span class='menu-item-parent'>" + _('Siparişler') + "</span>",
-        children: [
-          {
-            href: root_path,
-            title: _('Siparişler'),
-            content: "<span class='menu-item-parent'>" + _('Parça Siparişi') + "</span>"
-          },
-          {
-            href: car_orders_path,
-            title: _('Siparişler'),
-            content: "<span class='menu-item-parent'>" + _('Otomobil Siparişi') + "</span>"
-          },
-        ]
       },
       {
         href: miscellaneous_invoice_path,

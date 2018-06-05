@@ -69,6 +69,6 @@ class CarOrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_order_params
-      params.require(:car_order).permit(:customer, :orderDate, :deliveryDate, :adet, :fiyat, :status)
+      params.require(:car_order).permit(:customer, :orderDate, :deliveryDate, :adet, :fiyat, :status, :car_id,:part_id,:cname,:pname)
     end
 end
